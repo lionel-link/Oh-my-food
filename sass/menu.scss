@@ -2,63 +2,59 @@ $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 
-.logomenu {
+.logoMenu {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0 10px 0;
 
     &__icon {
         position: relative;
-        right: 80px;
+        right: 60px;
+        font-size: 22px;
     }
 }
 
-.backgroundImg {
-    width: 100%;
-    height: 300px;
+.menuContainer {
+    padding-top: 200px;
+    background-color: #f7f7f7;
     background-image: url(/images/backgroundImg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+
+    &__title {
+        display: flex;
+        padding: 40px 20px 0 20px;
+        background-color: #f7f7f7;
+        border-radius: 40px 40px 0 0;
+        font-family: Shrikhand;
+        font-size: 27px;
+
+        &>* {
+            flex: 1;
+        }
+    }
 }
 
-.containerMenu {
-    margin-top: -60px;
-    background-color: #f7f7f7;
-    border-radius: 40px 40px 0 0;
-    padding: 40px 20px;
-}
 
-.menuTitle {
-    font-family: Shrikhand;
-    font-size: 22px;
-}
+.cardMenuContainer {
+    margin: 20px 0;
+    padding: 0 20px;
 
-.ContainerMenu__icon {
-    padding-left: 150px;
-}
+    &__title {
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 30px 0 10px 0;
 
-.mainMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 30px;
-}
-
-.mainMenuTitle {
-    font-weight: 300;
-}
-
-.mainMenuBorder {
-    position: relative;
-    top: -5px;
-    box-sizing: content-box;
-    height: 3px;
-    width: 40px;
-    overflow: visible;
-    background-color: $tertiaire;
-    border: none;
+        &::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 4px;
+            border-bottom: 4px solid $tertiaire;
+        }
+    }
 }
 
 .cardMenu {
@@ -66,32 +62,68 @@ $tertiaire: #99E2D0;
     flex-direction: row;
     justify-content: space-between;
     background-color: white;
-    padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     align-items: end;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-bottom: 15px;
+    width: 100%;
+
+    &__content {
+        display: flex;
+        padding: 15px;
+        justify-content: space-between;
+        width: 100%;
+        align-items: end;
+    }
+
+    &:hover {
+        -webkit-transition: width 1s ease-in-out;
+        -moz-transition: width 1s ease-in-out;
+        -o-transition: width 1s ease-in-out;
+        transition: width 1s ease-in-out;
+        width: 85%;
+    }
 }
 
-.cardMenuTitle {
-    font-size: 18px;
-    font-weight: 700;
-    padding-bottom: 5px;
+.cardMenu__animated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 73px;
+    background-color: $tertiaire;
+    border-radius: 0 15px 15px 0;
+
+    &__icon {
+        color: white;
+        font-size: 24px;
+    }
 }
 
-.cardMenuText {
-    font-weight: 300;
-    font-size: 15px;
+.cardMenu__descriptionContainer__text {
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        padding-bottom: 5px;
+
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 15px;
+    }
 }
 
-.cardMenuPrice {
+.cardMenu__descriptionContainer__price {
     font-weight: 700;
 }
 
 .menuBottom {
     text-align: center;
+
 }
 
 .linearButton.linearButtonMenu {
     padding: 15px 40px;
+    margin: 20px 0 40px;
 }

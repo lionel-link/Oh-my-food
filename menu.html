@@ -16,113 +16,110 @@
 </head>
 
 <body>
-    <header>
-        <div class="logomenu"> <i class="fa-sharp fa-solid fa-arrow-left logomenu__icon"></i> <img
-                src="images/ohmyfood@2x.svg" alt=""></div>
-    </header>
-    <div class="backgroundImg"></div>
-    <div class="containerMenu">
-        <div class="menuTitle">À la française <i class="fa-regular fa-heart ContainerMenu__icon"></i></div>
-        <div class="mainMenu">
-            <div class="mainMenuTitle">ENTREES</div>
-            <div>
-                <hr class="mainMenuBorder">
+    <div class="loader">
+        <header>
+            <div class="logoMenu">
+                <i class="fa-sharp fa-solid fa-arrow-left logoMenu__icon"></i>
+                <img src="images/ohmyfood@2x.svg" alt="">
             </div>
-        </div>
-        <div class="cardMenuCotainer">
-            <div class="cardMenu">
-                <div class="cardMenuDescription">
-                    <div class="cardMenuTitle">Tartare de poulpe acidulé</div>
-                    <div class="cardMenuText">Aux zestes d'orange</div>
-                </div>
-                <div class="cardMenuPrice">25€</div>
-            </div>
-            <div class="cardMenu">
-                <div class="cardMenuDescription">
-                    <div class="cardMenuTitle">Velouté de légumes d'antan</div>
-                    <div class="cardMenuText">Carotte, panais, topinambour</div>
-                </div>
-                <div class="cardMenuPrice">35€</div>
-            </div>
-            <div class="cardMenu">
-                <div class="cardMenuDescription">
-                    <div class="cardMenuTitle">Soupe à l'oignon</div>
-                    <div class="cardMenuText">Revisitée</div>
-                </div>
-                <div class="cardMenuPrice">20€</div>
-            </div>
-            <div class="mainMenu">
-                <div class="mainMenuTitle">PLATS</div>
-                <div>
-                    <hr class="mainMenuBorder">
+        </header>
+        <div class="menuContainer">
+            <div class="menuContainer__title">
+                À la française
+                <div class="iconContainer menuContainer__icon">
+                    <img class="iconContainer__img" src="/images/heart.png" alt="heart">
+                    <img class="iconContainer__imgColored" src="/images/colored-heart.png" alt="heart">
                 </div>
             </div>
-            <div class="cardMenuCotainer">
-                <div class="cardMenu">
-                    <div class="cardMenuDescription">
-                        <div class="cardMenuTitle">Coquilles Saint-Jacques</div>
-                        <div class="cardMenuText">Accompagnées d'une purée de panais</div>
+            <div class="cardMenuContainer">
+                <div class="cardMenuContainer__title">Entrées</div>
+                <div class="cardMenu fadeInTop">
+                    <div class="cardMenu__content">
+                        <div class="cardMenu__descriptionContainer__text">
+                            <div class="cardMenu__descriptionContainer__text__title">Tartare de poulpe acidulé</div>
+                            <div class="cardMenu__descriptionContainer__text__text">Carotte, panais, topinambour</div>
+                        </div>
+                        <div class="cardMenu__descriptionContainer__price">25€</div>
                     </div>
-                    <div class="cardMenuPrice">40€</div>
+                    <div class="cardMenu__animated"><i class="fa-sharp fa-solid fa-circle-check cardMenu__animated__icon"></i></div>
+                </div>
+                <div class="cardMenu fadeInTop1">
+                    <div class="cardMenu__descriptionContainer__text">
+                        <div class="cardMenu__descriptionContainer__text__title">Velouté de légumes d'antan</div>
+                        <div class="cardMenu__descriptionContainer__text__text">Aux zestes d'orange</div>
+                    </div>
+                    <div class="cardMenu__descriptionContainer__price">35€</div>
+                </div>
+                <div class="cardMenu fadeInTop2">
+                    <div class="cardMenu__descriptionContainer__text">
+                        <div class="cardMenu__descriptionContainer__text__title">Soupe à l'oignon</div>
+                        <div class="cardMenu__descriptionContainer__text__text">Revisitée</div>
+                    </div>
+                    <div class="cardMenu__descriptionContainer__price">20€</div>
+                </div>
+            </div>
+            <div class="cardMenuContainer">
+                <div class="cardMenuContainer__title">Plats</div>
+                <div class="cardMenu fadeInTop">
+                    <div class="cardMenu__descriptionContainer__text">
+                        <div class="cardMenu__descriptionContainer__text__title">Coquilles Saint-Jacques</div>
+                        <div class="cardMenu__descriptionContainer__text__text">Accompagnées d'une purée de panais</div>
+                    </div>
+                    <div class="cardMenu__descriptionContainer__price">40€</div>
+                </div>
+                <div class="cardMenu fadeInTop1">
+                    <div class="cardMenu__descriptionContainer__text">
+                        <div class="cardMenu__descriptionContainer__text__title">Magret de canard</div>
+                        <div class="cardMenu__descriptionContainer__text__text">Et parmentier de pommes de terre</div>
+                    </div>
+                    <div class="cardMenu__descriptionContainer__price">35€</div>
+                </div>
+                <div class="cardMenu fadeInTop2">
+                    <div class="cardMenu__descriptionContainer__text">
+                        <div class="cardMenu__descriptionContainer__text__title">Pigeonneau d'Ille-et-Vilaine</div>
+                        <div class="cardMenu__descriptionContainer__text__text">Sur son lit de gnocchis aux légumes
+                        </div>
+                    </div>
+                    <div class="cardMenu__descriptionContainer__price">44€</div>
+                </div>
+            </div>
+            <div class="cardMenuContainer">
+                <div class="cardMenuContainer__title">Desserts</div>
+                <div class="cardMenu fadeInTop">
+                    <div class="cardMenu__descriptionContainer__text">
+                        <div class="cardMenu__descriptionContainer__text__title">Pétales de violettes glacés</div>
+                        <div class="cardMenu__descriptionContainer__text__text">Et purée de noisettes</div>
+                    </div>
+                    <div class="cardMenu__descriptionContainer__price">18€</div>
                 </div>
                 <div class="cardMenu">
-                    <div class="cardMenuDescription">
-                        <div class="cardMenuTitle">Magret de canard</div>
-                        <div class="cardMenuText">Et parmentier de pommes de terre</div>
+                    <div class="cardMenu__descriptionContainer__text fadeInTop1">
+                        <div class="cardMenu__descriptionContainer__text__title">Fondant au chocolat</div>
+                        <div class="cardMenu__descriptionContainer__text__text">Revisitée</div>
                     </div>
-                    <div class="cardMenuPrice">35€</div>
+                    <div class="cardMenu__descriptionContainer__price">22€</div>
                 </div>
-                <div class="cardMenu">
-                    <div class="cardMenuDescription">
-                        <div class="cardMenuTitle">Pigeonneau d'Ille-et-Vilaine</div>
-                        <div class="cardMenuText">Sur son lit de gnocchis aux légumes</div>
+                <div class="cardMenu fadeInTop2">
+                    <div class="cardMenu__descriptionContainer__text">
+                        <div class="cardMenu__descriptionContainer__text__title">Millefeuille croustillant</div>
+                        <div class="cardMenu__descriptionContainer__text__text">Myrtilles et pâte d'amande</div>
                     </div>
-                    <div class="cardMenuPrice">44€</div>
+                    <div class="cardMenu__descriptionContainer__price">23€</div>
                 </div>
+            </div>
 
-            </div>
-            <div class="mainMenu">
-                <div class="mainMenuTitle">Desserts</div>
-                <div>
-                    <hr class="mainMenuBorder">
-                </div>
-            </div>
-            <div class="cardMenuCotainer">
-                <div class="cardMenu">
-                    <div class="cardMenuDescription">
-                        <div class="cardMenuTitle">Pétales de violettes glacés</div>
-                        <div class="cardMenuText">Et purée de noisettes</div>
-                    </div>
-                    <div class="cardMenuPrice">18€</div>
-                </div>
-                <div class="cardMenu">
-                    <div class="cardMenuDescription">
-                        <div class="cardMenuTitle">Fondant au chocolat</div>
-                        <div class="cardMenuText">Revisitée</div>
-                    </div>
-                    <div class="cardMenuPrice">22€</div>
-                </div>
-                <div class="cardMenu">
-                    <div class="cardMenuDescription">
-                        <div class="cardMenuTitle">Millefeuille croustillant</div>
-                        <div class="cardMenuText">Myrtilles et pâte d'amande</div>
-                    </div>
-                    <div class="cardMenuPrice">23€</div>
-                </div>
-
-            </div>
         </div>
         <div class="menuBottom"><button class="linearButton linearButtonMenu">Commander</button></div>
+        <footer>
+            <div><img class="footer__logo" src="images/ohmyfood-white.png" alt=""></div>
+            <ul>
+                <li> <i class="fa-solid fa-utensils footer__icon"></i> Proposer un restaurant</li>
+                <li> <i class="fa-regular fa-handshake footer__icon"></i> Devenir partenaire</li>
+                <li>Mentions légales</li>
+                <li>Contact</li>
+            </ul>
+        </footer>
     </div>
-    <footer>
-        <div><img class="footer__logo" src="images/ohmyfood-white.png" alt=""></div>
-        <ul>
-            <li> <i class="fa-solid fa-utensils footer__icon"></i> Proposer un restaurant</li>
-            <li> <i class="fa-regular fa-handshake footer__icon"></i> Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
-        </ul>
-    </footer>
 </body>
 
 </html>

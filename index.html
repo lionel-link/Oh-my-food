@@ -17,96 +17,92 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo"><a href=""><img src="/images/ohmyfood@2x.svg" alt=""></a></div>
-        <div class="location"> <i class="fa-solid fa-location-dot"></i> Paris, Belleville</div>
+    <header class="header">
+        <div class="header__img"><a href=""><img src="/images/ohmyfood@2x.svg" alt=""></a></div>
+        <div class="header__location"> <i class="fa-solid fa-location-dot header__location__i"></i> Paris, Belleville
+        </div>
     </header>
     <div class="topContainer">
-            <h1 class="topContainer__title title">Réservez le menu qui vous convient</h1>
-            <div class="topContainer__text">Découvrez des restaurants d'exception sélectionnés par nos soins</div>
-            <button class="linearButton">Explorer nos restaurants</button>
+        <h1 class="topContainer__title title">Réservez le menu qui vous convient</h1>
+        <div class="topContainer__text">Découvrez des restaurants d'exception sélectionnés par nos soins</div>
+        <button class="linearButton">Explorer nos restaurants</button>
     </div>
     <div class="mainContainer">
         <div class="mainContainer__title title">Fonctionnement</div>
-        <button class="mainContainer__button"> <span class="mainContainer__buttonNumber">1</span> <i class="fa-solid fa-mobile-screen-button mainContainer__buttonIcon"></i> Choisissez un restaurant</button>
-        <button class="mainContainer__button"> <span class="mainContainer__buttonNumber">2</span> <i class="fa-solid fa-bars mainContainer__buttonIcon"></i> Composer votre menu</button>
-        <button class="mainContainer__button"> <span class="mainContainer__buttonNumber">3</span> <i class="fa-sharp fa-solid fa-plate-wheat mainContainer__buttonIcon"></i> Dégustez au restaurant</button>
+        <button class="buttonMenu"> <span class="buttonMenu__number">1</span> <i
+                class="fa-solid fa-mobile-screen-button buttonMenu__icon"></i> Choisissez un restaurant</button>
+        <button class="buttonMenu"> <span class="buttonMenu__number">2</span> <i
+                class="fa-solid fa-list buttonMenu__icon"></i> Composer votre menu</button>
+        <button class="buttonMenu"> <span class="buttonMenu__number">3</span> <i
+                class="fa-sharp fa-solid fa-store buttonMenu__icon"></i> Dégustez au restaurant</button>
     </div>
     <div class="cardContainer">
         <div class="cardContainer__title title">Restaurants</div>
         <div class="card">
-            <img class="car__img" src="images/menilmontant.jpg" alt="">
+            <img class="card__img" src="images/menilmontant.jpg" alt="">
             <span class="card__label">Nouveau</span>
-            <div class="cardDescription">
-                <div class="cardText">
-                    <div class="card__title">La palette du goût</div>
-                    <div class="card__text">Ménilmontant</div>
+            <div class="card__description">
+                <div class="card__description__textContainer">
+                    <div class="card__description__textContainer__title">La palette du goût</div>
+                    <div class="card__description__textContainer__text">Ménilmontant</div>
                 </div>
-                <div class="card__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="card__iconSvg"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
-                    </svg>
+                <div class="iconContainer">
+                    <img class="iconContainer__img" src="/images/heart.png" alt="heart">
+                    <img class="iconContainer__imgColored" src="/images/colored-heart.png" alt="heart">
                 </div>
             </div>
         </div>
         <div class="card">
-            <img class="car__img" src="images/menilmontant.jpg" alt="">
+            <img class="card__img" src="images/menilmontant.jpg" alt="">
             <span class="card__label">Nouveau</span>
-            <div class="cardDescription">
-                <div class="cardText">
-                    <div class="card__title">La palette du goût</div>
-                    <div class="card__text">Ménilmontant</div>
+            <div class="card__description">
+                <div class="card__description__textContainer">
+                    <div class="card__description__textContainer__title">La palette du goût</div>
+                    <div class="card__description__textContainer__text">Ménilmontant</div>
                 </div>
-                <div class="card__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="card__iconSvg" viewBox="0 0 16 16">
-                        <path
-                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
-                    </svg>
+                <div class="iconContainer">
+                    <img class="iconContainer__img" src="/images/heart.png" alt="heart">
+                    <img class="iconContainer__imgColored" src="/images/colored-heart.png" alt="heart">
                 </div>
             </div>
         </div>
         <div class="card">
-            <img class="car__img" src="images/menilmontant.jpg" alt="">
+            <img class="card__img" src="images/menilmontant.jpg" alt="">
             <span class="card__label">Nouveau</span>
-            <div class="cardDescription">
-                <div class="cardText">
-                    <div class="card__title">La palette du goût</div>
-                    <div class="card__text">Ménilmontant</div>
+            <div class="card__description">
+                <div class="card__description__textContainer">
+                    <div class="card__description__textContainer__title">La palette du goût</div>
+                    <div class="card__description__textContainer__text">Ménilmontant</div>
                 </div>
-                <div class="card__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="card__iconSvg" viewBox="0 0 16 16">
-                        <path
-                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
-                    </svg>
+                <div class="iconContainer">
+                    <img class="iconContainer__img" src="/images/heart.png" alt="heart">
+                    <img class="iconContainer__imgColored" src="/images/colored-heart.png" alt="heart">
                 </div>
             </div>
         </div>
         <div class="card">
-            <img class="car__img" src="images/menilmontant.jpg" alt="">
+            <img class="card__img" src="images/menilmontant.jpg" alt="">
             <span class="card__label">Nouveau</span>
-            <div class="cardDescription">
-                <div class="cardText">
-                    <div class="card__title">La palette du goût</div>
-                    <div class="card__text">Ménilmontant</div>
+            <div class="card__description">
+                <div class="card__description__textContainer">
+                    <div class="card__description__textContainer__title">La palette du goût</div>
+                    <div class="card__description__textContainer__text">Ménilmontant</div>
                 </div>
-                <div class="card__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="card__iconSvg" viewBox="0 0 16 16">
-                        <path
-                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595L8 6.236zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.55 7.55 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
-                    </svg>
+                <div class="iconContainer">
+                    <img class="iconContainer__img" src="/images/heart.png" alt="heart">
+                    <img class="iconContainer__imgColored" src="/images/colored-heart.png" alt="heart">
                 </div>
             </div>
         </div>
     </div>
-    <footer>
+    <footer class="footer">
         <div><img class="footer__logo" src="images/ohmyfood-white.png" alt=""></div>
-        <ul>
-            <li> <i class="fa-solid fa-utensils footer__icon"></i> Proposer un restaurant</li>
-            <li> <i class="fa-regular fa-handshake footer__icon"></i> Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
+        <ul class="footer__menu">
+            <li class="footer__menu__li"> <i class="fa-solid fa-utensils footer__icon"></i> Proposer un restaurant</li>
+            <li class="footer__menu__li"> <i class="fa-regular fa-handshake footer__menu__li__icon"></i> Devenir
+                partenaire</li>
+            <li class="footer__menu__li">Mentions légales</li>
+            <li class="footer__menu__li">Contact</li>
         </ul>
     </footer>
 

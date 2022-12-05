@@ -1,10 +1,11 @@
+@import "animation.scss";
+@import "loader.scss";
+@import "animated-heart.scss";
+@import "vars.scss";
+@import "button-menu.scss";
+@import "linear-button.scss";
 @import "menu.scss";
 
-
-
-$primaire: #9356DC;
-$secondaire: #FF79DA;
-$tertiaire: #99E2D0;
 
 
 body {
@@ -24,24 +25,34 @@ li {
     list-style: none;
 }
 
-
-
-
-.logo {
-    text-align: center;
-    padding: 20px;
-}
-
 .title {
-    font-size: 24px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-.location {
-    text-align: center;
-    background-color: #EAEAEA;
-    padding: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+
+
+
+.header {
+    &__img {
+        text-align: center;
+        padding: 30px 0 10px 0;
+    }
+
+    &__location {
+        color: #353535;
+        font-weight: 700;
+        text-align: center;
+        background-color: #EAEAEA;
+        padding: 20px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px inset;
+    }
+
+    &__location__i {
+        color: #353535;
+        padding-right: 20px;
+    }
 }
 
 .topContainer {
@@ -54,54 +65,27 @@ li {
     &>* {
         text-align: center;
     }
-}
 
-.linearButton {
-    color: white;
-    background: linear-gradient(#FF79DA, #9356DC);
-    margin-top: 30px;
-    border-radius: 30px;
-    padding: 15px 20px;
-    border: none;
+    &__title {
+        padding: 0 30px;
+    }
 }
 
 .mainContainer {
     padding: 20px 20px 50px 20px;
+
+    &__title {
+        padding-bottom: 30px;
+    }
 }
 
-.mainContainer__title {
-    padding-bottom: 30px;
-}
-
-.mainContainer__button {
-    display: flex;
-    align-items: center;
-    width: 330px;
+.cardContainer {
+    padding: 0 20px 50px 20px;
     background-color: #F7F7F7;
-    padding: 20px;
-    border: none;
-    border-radius: 12px;
-    font-weight: 600;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin-bottom: 30px;
-}
 
-.mainContainer__buttonNumber {
-    position: relative;
-    right: 31px;
-    color: white;
-    font-size: 12px;
-    padding: 4px 8px;
-    background-color: #9356DC;
-    border-radius: 30px;
-}
-
-.mainContainer__buttonIcon {
-    position: relative;
-    right: 13px;
-    font-size: 20px;
-    padding: 0 5px;
-    color: gray;
+    &____title {
+        padding: 40px 0 20px 0;
+    }
 }
 
 .card {
@@ -110,69 +94,47 @@ li {
     box-sizing: border-box;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-bottom: 20px;
-}
 
-.car__img {
-    width: 335px;
-    height: 175px;
-    border-radius: 15px 15px 0 0;
-    object-fit: cover;
-}
+    &__img {
 
-.cardContainer {
-    padding: 0 20px 50px 20px;
-    background-color: #F7F7F7;
-}
+        width: 335px;
+        height: 175px;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+    }
 
-.cardContainer__title {
-    padding: 40px 0 20px 0;
-}
+    &__label {
+        font-size: 14px;
+        color: gray;
+        position: relative;
+        top: -165px;
+        left: 250px;
+        padding: 5px 10px;
+        border-radius: 2px;
+        background-color: $tertiaire;
+    }
 
-.card__label {
-    font-size: 14px;
-    color: gray;
-    position: relative;
-    top: -165px;
-    left: 250px;
-    padding: 5px 10px;
-    border-radius: 2px;
-    background-color: $tertiaire;
-}
+    &__description {
+        height: 60px;
+        display: flex;
+        padding: 0 20px;
+        margin-top: -5px;
 
-.cardDescription {
-    height: 60px;
-    display: flex;
-    padding: 0 20px;
-    margin-top: -5px;
-
-    &>* {
-        flex: 1;
+        &>* {
+            flex: 1;
+        }
     }
 }
 
-.cardText {
-    position: relative;
-    top: -5px
-}
+.card__description__textContainer {
+    &__title {
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
 
-.card__title {
-    font-weight: 700;
-    padding-bottom: 7px;
-}
-
-.card__icon {
-    font-size: 25px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-.card__iconSvg {
-    width: 25px;
-    height: 25px;
-
-    &:hover {
-        background-color: $primaire;
+    &__text {
+        position: relative;
+        top: -5px
     }
 }
 
@@ -180,6 +142,7 @@ li {
 footer {
     padding: 30px 25px;
     background-color: #353535;
+
     li {
         color: white;
         padding-bottom: 10px;
@@ -193,7 +156,6 @@ footer {
     margin-bottom: 20px;
 }
 
-.footer__icon {
+.footer__menu__li__icon {
     padding-right: 5px;
 }
-
