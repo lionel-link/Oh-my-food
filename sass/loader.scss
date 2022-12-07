@@ -1,23 +1,23 @@
-.loader {
-    background-color: white;
-    opacity: 0;
-}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
 
 .loader {
     opacity: 1;
-    transition: opacity 3s ease-in-out;
-    -moz-transition: opacity 3s ease-in-out;
-    -webkit-transition: opacity 3s ease-in-out;
-    // &::after {
-    //     opacity: 1;
-    //     content: url(/images/ohmyfood@2x.svg);
-    // }
+    background: white;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+
+    position: absolute;
+    z-index: 1000;
+
+    animation: 1s fadeout;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+    pointer-events: none;
 }
-
-
-
-// body .loader {
-//     opacity: 1;
-//         transition: all 3s;
-//         -webkit-transition: all 3s;
-// }

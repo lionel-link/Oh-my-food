@@ -67,21 +67,24 @@ $tertiaire: #99E2D0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-bottom: 15px;
     width: 100%;
+    overflow: hidden;
+    display: flex;
+
 
     &__content {
         display: flex;
         padding: 15px;
         justify-content: space-between;
-        width: 100%;
+        min-width: 100%;
         align-items: end;
+        box-sizing: border-box;
     }
 
     &:hover {
-        -webkit-transition: width 1s ease-in-out;
-        -moz-transition: width 1s ease-in-out;
-        -o-transition: width 1s ease-in-out;
-        transition: width 1s ease-in-out;
-        width: 85%;
+        & .cardMenu__content {
+            transition: min-width 250ms ease-in-out;
+            min-width: 85%;
+        }
     }
 }
 
@@ -111,6 +114,10 @@ $tertiaire: #99E2D0;
     &__text {
         font-weight: 300;
         font-size: 15px;
+        white-space: nowrap;
+        max-width: 250px;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 
