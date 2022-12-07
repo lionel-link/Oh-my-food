@@ -23,16 +23,27 @@
   display: flex;
 }
 
-.loader {
-  background-color: white;
-  opacity: 0;
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
-
 .loader {
   opacity: 1;
-  transition: opacity 3s ease-in-out;
-  -moz-transition: opacity 3s ease-in-out;
-  -webkit-transition: opacity 3s ease-in-out;
+  background: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1000;
+  animation: 1s fadeout;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
 }
 
 .iconContainer {
@@ -174,20 +185,20 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-bottom: 15px;
   width: 100%;
+  overflow: hidden;
+  display: flex;
 }
 .cardMenu__content {
   display: flex;
   padding: 15px;
   justify-content: space-between;
-  width: 100%;
+  min-width: 100%;
   align-items: end;
+  box-sizing: border-box;
 }
-.cardMenu:hover {
-  -webkit-transition: width 1s ease-in-out;
-  -moz-transition: width 1s ease-in-out;
-  -o-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;
-  width: 85%;
+.cardMenu:hover .cardMenu__content {
+  transition: min-width 250ms ease-in-out;
+  min-width: 85%;
 }
 
 .cardMenu__animated {
@@ -212,6 +223,10 @@
 .cardMenu__descriptionContainer__text__text {
   font-weight: 300;
   font-size: 15px;
+  white-space: nowrap;
+  max-width: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .cardMenu__descriptionContainer__price {
@@ -233,6 +248,7 @@ body {
   margin: 0 auto;
   font-family: "Roboto", "Shrikhand", sans-serif;
   box-sizing: border-box;
+  position: relative;
 }
 
 ul {
