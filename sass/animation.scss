@@ -1,13 +1,16 @@
 .fadeInTop {
     animation: fadeInTop 1s ease-in-out;
+    animation-delay: 3s;
 }
 
 .fadeInTop1 {
     animation: fadeInTop 1.5s ease-in-out;
+    animation-delay: 3.1s;
 }
 
 .fadeInTop2 {
     animation: fadeInTop 2s ease-in-out;
+    animation-delay: 3.2s;
 }
 
 @keyframes fadeInTop {

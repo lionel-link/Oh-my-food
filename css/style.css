@@ -1,13 +1,16 @@
 .fadeInTop {
   animation: fadeInTop 1s ease-in-out;
+  animation-delay: 3s;
 }
 
 .fadeInTop1 {
   animation: fadeInTop 1.5s ease-in-out;
+  animation-delay: 3.1s;
 }
 
 .fadeInTop2 {
   animation: fadeInTop 2s ease-in-out;
+  animation-delay: 3.2s;
 }
 
 @keyframes fadeInTop {
@@ -23,16 +26,43 @@
   display: flex;
 }
 
-.loader {
-  background-color: white;
-  opacity: 0;
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.loaderContainer {
+  opacity: 1;
+  opacity: 1;
+  background: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1000;
+  animation: 1s fadeout;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
 }
 
 .loader {
-  opacity: 1;
-  transition: opacity 3s ease-in-out;
-  -moz-transition: opacity 3s ease-in-out;
-  -webkit-transition: opacity 3s ease-in-out;
+  position: relative;
+  top: 30%;
+  text-align: center;
+  animation: 1s zoom infinite;
 }
 
 .iconContainer {
@@ -165,6 +195,7 @@
 }
 
 .cardMenu {
+  height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -174,20 +205,28 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-bottom: 15px;
   width: 100%;
+  overflow: hidden;
+  display: flex;
 }
 .cardMenu__content {
   display: flex;
-  padding: 15px;
+  padding: 12px;
   justify-content: space-between;
-  width: 100%;
+  min-width: 100%;
   align-items: end;
+  box-sizing: border-box;
 }
-.cardMenu:hover {
-  -webkit-transition: width 1s ease-in-out;
-  -moz-transition: width 1s ease-in-out;
-  -o-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;
-  width: 85%;
+.cardMenu:hover .cardMenu__content {
+  transition: min-width 250ms ease-in-out;
+  min-width: 75%;
+}
+.cardMenu:hover .cardMenu__content__descriptionContainer__text {
+  width: 230px;
+}
+.cardMenu:hover .cardMenu__animated__icon {
+  animation: rotate 0.5s ease-in-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .cardMenu__animated {
@@ -204,17 +243,22 @@
   font-size: 24px;
 }
 
-.cardMenu__descriptionContainer__text__title {
-  font-size: 18px;
+.cardMenu__content__descriptionContainer__title {
+  font-size: 16px;
   font-weight: 700;
   padding-bottom: 5px;
 }
-.cardMenu__descriptionContainer__text__text {
+.cardMenu__content__descriptionContainer__text {
   font-weight: 300;
   font-size: 15px;
+  white-space: nowrap;
+  max-width: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.cardMenu__descriptionContainer__price {
+.cardMenu__content__price {
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -227,12 +271,29 @@
   margin: 20px 0 40px;
 }
 
+@keyframes reducer {
+  from {
+    min-width: 100%;
+  }
+  to {
+    min-width: 83%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 body {
   font-size: 16px;
   width: 375px;
   margin: 0 auto;
   font-family: "Roboto", "Shrikhand", sans-serif;
   box-sizing: border-box;
+  position: relative;
 }
 
 ul {
